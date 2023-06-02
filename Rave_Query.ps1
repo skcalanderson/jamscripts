@@ -21,6 +21,7 @@ C:\RAVE-Uploader\rave-people.csv
 "@
 
 # If you have to use users and passwords, my condolences
+# Don't be dumb like me and use at least Base64 to hide the password
 $connectionTemplate = "Data Source={0};User ID=******;Password=*******;Initial Catalog={1};"
 $connectionString = [string]::Format($connectionTemplate, $server, $database)
 $connection = New-Object System.Data.SqlClient.SqlConnection
