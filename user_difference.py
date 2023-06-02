@@ -9,6 +9,7 @@ a = pd.read_csv(os.path.join(BASE_DIR,'current_csv_files\\users_final.csv'))
 b = pd.read_csv(os.path.join(BASE_DIR,'previous_csv_files\\users_final.csv'))
 c = pd.concat([a,b], axis=0)
 
+#This is the actual function that creates the diff between the two files
 c.drop_duplicates(keep=False, inplace=True) # Set keep to False if you don't want any
                                               # of the duplicates at all
 c.reset_index(drop=True, inplace=True)
